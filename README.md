@@ -10,17 +10,6 @@
 
 ---
 
-## 📌 Project Overview & CA3 Evaluation Summary
-
-| Evaluation Domain | Marks | Feature / Component |
-| :--- | :---: | :--- |
-| **Submission** | **5** | GitHub-ready repository with complete modular codebase. |
-| **GitHub Link** | **5** | Structured repository with `.gitignore`, `README.md`, and clean commits. |
-| **Model / Implementation** | **10** | PyMuPDF text extraction + Langflow AI Agent workflow + Intelligent Fallback engine. |
-| **Project Report** | **5** | Full 9-chapter IEEE/College template report in [`docs/report.md`](docs/report.md). |
-| **Viva Voce** | **5** | 20 detailed Q&As in [`docs/viva_questions.md`](docs/viva_questions.md). |
-
----
 
 ## 🎯 Objectives & Key Features
 
