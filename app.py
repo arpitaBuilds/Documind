@@ -511,16 +511,23 @@ def build_app():
 
         def handle_health_check():
             import requests
-            try:
-                res = requests.get(f"{settings.LANGFLOW_URL.rstrip('/')}/health", timeout=3)
-                if res.status_code == 200:
-                    return f"✅ **Langflow Server is Online & Reachable!** (URL: `{settings.LANGFLOW_URL}`)"
-            except Exception as e:
-                pass
+            headers = {
+                "Bypass-Tunnel-Reminder": "true",
+                "User-Agent": "DocuMind-Client"
+            }
+            base_url = settings.LANGFLOW_URL.rstrip('/')
+            for ep in ["/health", "/api/v1/health", ""]:
+                try:
+                    res = requests.get(f"{base_url}{ep}", headers=headers, timeout=5)
+                    if res.status_code in (200, 302, 307):
+                        return f"✅ **Langflow Server is Online & Reachable!** (URL: `{settings.LANGFLOW_URL}`)"
+                except Exception:
+                    pass
             return (
                 f"⚠️ **Langflow Server is Offline or Unreachable** (`{settings.LANGFLOW_URL}`).\n"
                 f"*(Note: Langflow API will be invoked when server is reachable. Set DEMO_MODE=true for offline fallback testing.)*"
             )
+
 
         # Wire Up Event Listeners
         login_btn.click(

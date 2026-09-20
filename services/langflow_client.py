@@ -55,8 +55,11 @@ class LangflowClient:
         api_url = f"{settings.LANGFLOW_URL.rstrip('/')}/api/v1/run/{settings.LANGFLOW_FLOW_ID}?stream=false"
         
         headers = {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Bypass-Tunnel-Reminder": "true",
+            "User-Agent": "DocuMind-Client"
         }
+
         
         if settings.LANGFLOW_API_KEY:
             headers["x-api-key"] = settings.LANGFLOW_API_KEY
