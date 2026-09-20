@@ -94,16 +94,6 @@ Open your browser at `http://127.0.0.1:7860`.
 
 ---
 
-## 🔑 Login & Session Guidance
-
-1. Click on the **🔐 Authentication & Session** tab.
-2. Enter default login credentials:
-   - **Username**: `admin`
-   - **Password**: `adminpassword123`
-3. Click **🔓 Log In**. You will receive an active JWT session token allowing access to the Document Analysis tab.
-
----
-
 ## 🤖 AI Agent Execution Loop
 
 ```text
