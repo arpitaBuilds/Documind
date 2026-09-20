@@ -165,10 +165,9 @@ DocuMind/
 
 ---
 
-## 🎓 Viva Preparation & Documentation Links
+## 🎓 Documentation Links
 
 - 📘 **Full CA3 Project Report**: [docs/report.md](docs/report.md)
-- ❓ **20 Viva Questions & Answers**: [docs/viva_questions.md](docs/viva_questions.md)
 - 🏗️ **Architecture Specifications**: [docs/architecture.md](docs/architecture.md)
 
 ---
