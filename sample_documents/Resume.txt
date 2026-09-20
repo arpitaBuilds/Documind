@@ -1,0 +1,27 @@
+ALEXANDER R. MORGAN
+Software Engineer | Machine Learning Specialist
+Email: alex.morgan@email.com | Phone: +1 (555) 019-2831
+GitHub: github.com/alexmorgan | LinkedIn: linkedin.com/in/alexmorgan
+
+SUMMARY
+Results-driven Computer Science graduate with 3+ years of hands-on experience in full-stack Python development, machine learning pipeline orchestration, and REST API engineering.
+
+EDUCATION
+Bachelor of Technology in Computer Science & Engineering
+Metropolitan University (2022 - 2026) | GPA: 3.9/4.0
+
+TECHNICAL SKILLS
+- Languages: Python, JavaScript, SQL, C++
+- AI/ML Frameworks: PyTorch, Scikit-Learn, LangChain, Langflow, Transformers
+- Web Development: Gradio, FastAPI, React, HTML5/CSS3
+- Databases & Cloud: PostgreSQL, MongoDB, Docker, Git, GCP
+
+PROJECTS
+DocuMind - Intelligent Document Organization Assistant
+- Designed an AI-agent-based document classification pipeline using Langflow and Gradio.
+- Implemented JWT session authentication and automatic document text extraction for PDF, DOCX, and TXT files.
+
+WORK EXPERIENCE
+Machine Learning Engineering Intern | TechNova Labs (May 2025 - August 2025)
+- Fine-tuned transformer models for multi-class document classification achieving 94% F1-score.
+- Automated ETL ingestion scripts reducing processing pipeline latency by 40%.

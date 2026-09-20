@@ -1,0 +1,59 @@
+{
+  "name": "DocuMind Document Organization Agent",
+  "description": "AI Agent workflow for document perception, classification, tagging, summary generation, and recommended folder placement.",
+  "endpoint_name": "documind-agent-flow-v1",
+  "data": {
+    "nodes": [
+      {
+        "id": "TextInputNode-1",
+        "type": "TextInput",
+        "data": {
+          "label": "Document Text Input",
+          "value": "",
+          "input_type": "text"
+        }
+      },
+      {
+        "id": "PromptNode-1",
+        "type": "PromptTemplate",
+        "data": {
+          "template": "You are DocuMind, an expert AI Agent for document organization and taxonomy generation.\nAnalyze the following document and output ONLY a valid JSON object matching the exact schema below.\n\nJSON SCHEMA:\n{\n  \"category\": \"Education | Career | Research | Finance | Personal | Other\",\n  \"subcategory\": \"Detailed sub-category name\",\n  \"summary\": \"Concise 2-3 sentence document summary\",\n  \"tags\": [\"Tag1\", \"Tag2\", \"Tag3\"],\n  \"suggested_folder\": \"Category/Subcategory\",\n  \"confidence\": 95,\n  \"reason\": \"Detailed explanation of classification decision\",\n  \"recommended_action\": \"Move to Category/Subcategory/\"\n}\n\nDOCUMENT TO ANALYZE:\n{document_text}\n\nCRITICAL: Respond ONLY with the raw JSON object. Do not include markdown codeblocks or conversational text.",
+          "inputs": ["document_text"]
+        }
+      },
+      {
+        "id": "LLMNode-1",
+        "type": "LLMModel",
+        "data": {
+          "model_name": "gpt-4o-mini / gemini-1.5-flash / configurable",
+          "temperature": 0.1,
+          "max_tokens": 1000
+        }
+      },
+      {
+        "id": "JSONParserNode-1",
+        "type": "StructuredOutputParser",
+        "data": {
+          "schema_type": "json"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "TextInputNode-1",
+        "target": "PromptNode-1",
+        "targetHandle": "document_text"
+      },
+      {
+        "source": "PromptNode-1",
+        "target": "LLMNode-1",
+        "targetHandle": "prompt"
+      },
+      {
+        "source": "LLMNode-1",
+        "target": "JSONParserNode-1",
+        "targetHandle": "llm_output"
+      }
+    ]
+  }
+}

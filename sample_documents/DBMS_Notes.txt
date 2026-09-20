@@ -1,0 +1,21 @@
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
+COURSE: DATABASE MANAGEMENT SYSTEMS (CS302)
+UNIT III: RELATIONAL DATABASE DESIGN & TRANSACTIONS
+
+1. NORMALIZATION
+Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity.
+- First Normal Form (1NF): Eliminates repeating groups; ensures atomic values in each column.
+- Second Normal Form (2NF): Meets 1NF requirements and removes partial functional dependencies.
+- Third Normal Form (3NF): Meets 2NF requirements and removes transitive dependencies.
+- Boyce-Codd Normal Form (BCNF): A stricter version of 3NF where for every functional dependency X -> Y, X must be a super key.
+
+2. SQL QUERIES AND INDEXING
+Structured Query Language (SQL) allows querying relational tables using SELECT, JOIN, GROUP BY, and HAVING clauses.
+Indexes (B-Trees and Hash Indexes) speed up data retrieval operations at the cost of additional storage and slower write operations.
+
+3. TRANSACTION MANAGEMENT AND ACID PROPERTIES
+A transaction is a logical unit of database operations.
+- Atomicity: All operations complete or none.
+- Consistency: Database moves from one valid state to another.
+- Isolation: Concurrent transactions do not interfere with each other.
+- Durability: Committed data persists even after system crashes.
